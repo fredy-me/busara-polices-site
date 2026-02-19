@@ -11,7 +11,7 @@
   <p><a href="/">← Busara Digital</a></p>
 
   <h1>PRIVACY POLICY — SOKOFY</h1>
-  <p><strong>Last Updated:</strong> 1 February 2026</p>
+  <p><strong>Last Updated:</strong> 19 February 2026</p>
 
   <h2>1. Introduction</h2>
   <p>
@@ -29,15 +29,18 @@
   </p>
   <p>
     Sokofy is currently intended for users in the United Republic of Tanzania.
-    We plan to expand availability to other countries, including Kenya, Uganda,
-    Nigeria, Rwanda, and additional regions. When required, this Privacy Policy
-    will be updated to comply with applicable data protection laws, including
-    GDPR-style privacy principles and similar regulations.
+    We may expand availability to other countries in the future. When required,
+    this Privacy Policy will be updated to reflect applicable data protection
+    laws and operational requirements.
   </p>
   <p>
     By accessing or using Sokofy, you confirm that you have read, understood,
     and agreed to this Privacy Policy. If you do not agree, you must discontinue
     use of the Service.
+  </p>
+  <p>
+    This Privacy Policy should be read together with our
+    <a href="/apps/sokofy/terms-of-service.html">Terms of Service</a>.
   </p>
   <!-- <p>
     Official Website: [INSERT WEBSITE URL]
@@ -45,8 +48,9 @@
 
   <h2>2. Information We Collect</h2>
   <p>
-    We collect only the information necessary to provide, secure, and improve
-    the Service.
+    Sokofy is primarily offline-first. Most business data you create in the app
+    is stored locally on your device. We collect and process limited information
+    to provide authentication, security, support, and legally required operations.
   </p>
 
   <h3>2.1 Personal Information</h3>
@@ -56,57 +60,90 @@
     <li>Shop or business name</li>
     <li>Email address</li>
     <li>Phone number</li>
-    <li>Account credentials (passwords are never stored in plain text)</li>
+    <li>Account credentials (passwords are not stored by Busara Digital in plain text)</li>
   </ul>
 
-  <h3>2.2 Device and Technical Information</h3>
+  <h3>2.2 Local Business Data You Enter (Stored on Your Device)</h3>
   <p>
-    To ensure proper functionality, security, and support, we may collect
-    limited technical information such as:
+    Sokofy stores business data locally on your device, which may include:
   </p>
   <ul>
-    <li>Device unique identifier (UID)</li>
-    <li>Device platform (Android or iOS)</li>
-    <li>Operating system version</li>
-    <li>Application version</li>
-    <li>IP address (where required for security or network operations)</li>
+    <li>Products, categories, stock levels, and stock thresholds</li>
+    <li>Sales records and transaction history</li>
+    <li>Orders (including drafts and confirmed sales)</li>
+    <li>Expenses (type, amount, payment method, date, notes)</li>
+    <li>Inventory debts and inventory notes</li>
+    <li>In-app notifications and app settings</li>
   </ul>
   <p>
-    When users submit bug reports or feature requests, certain technical
-    details may be included automatically in messages sent via our support
-    system (SMTP email), solely for diagnostics and service improvement.
+    This local data remains on your device unless you choose to export or share
+    it (for example, by generating and sharing a PDF report).
   </p>
 
-  <h3>2.3 Usage Data</h3>
+  <h3>2.3 Authentication and Account Profile Data (Cloud)</h3>
   <p>
-    We may collect anonymized or aggregated usage data, including:
+    Sokofy uses Firebase Authentication for sign-in (email/password and Google Sign-In).
+    Sokofy also stores limited account profile fields in a cloud database (Cloud Firestore),
+    such as:
   </p>
   <ul>
-    <li>App interaction events</li>
-    <li>Feature usage statistics</li>
-    <li>Error logs and crash diagnostics</li>
+    <li>User ID</li>
+    <li>Email address</li>
+    <li>Full name</li>
+    <li>Shop/business name</li>
+    <li>Phone number</li>
+    <li>Account metadata such as authentication timestamps and (where applicable) terms acceptance timestamps</li>
   </ul>
+
+  <h3>2.4 Email OTP Verification Data (Cloud)</h3>
   <p>
-    This data does not directly identify individual users and is used only to
-    improve the Service.
+    For certain security flows (such as email verification and password reset),
+    Sokofy uses one-time verification codes (“OTP”) sent to your email address.
+    To provide these flows, our backend may store limited OTP-related data, such as:
+  </p>
+  <ul>
+    <li>Your user ID and email address</li>
+    <li>The OTP purpose (e.g., email verification or password reset)</li>
+    <li>OTP security data (hashed code with a random salt), attempt count, and expiry timestamps</li>
+  </ul>
+
+  <h3>2.5 Support Requests and Feature Requests</h3>
+  <p>
+    If you submit a support request or feature request through the app, we receive the message you provide.
+    To help troubleshoot, the app may also include basic technical details such as your app version, platform,
+    and the screen you were on when you sent the request.
   </p>
 
-  <h3>2.4 Payment Information (Future Feature)</h3>
+  <h3>2.6 Photos (Profile/Background Images)</h3>
   <p>
-    At the current MVP phase, Sokofy does not process payments and does not
-    collect payment or billing data.
+    Sokofy may request permission to access your photos/media library only when you choose to pick a profile
+    or background image. Selected images are stored on your device. Sokofy is not designed to upload your photos
+    to Busara Digital servers as part of this feature.
   </p>
+
+  <h3>2.7 App Lock and Biometrics (Optional)</h3>
   <p>
-    If payment or subscription features are introduced in the future, users
-    will be notified in advance, and this Privacy Policy will be updated
-    accordingly.
+    Sokofy may offer an optional app lock feature that uses a PIN and (where supported) biometric unlock.
+    The PIN is stored as a salted hash in secure storage on your device. Biometric authentication is performed
+    by your device’s operating system; Busara Digital does not receive or store your biometric data.
+  </p>
+
+  <h3>2.8 Payments</h3>
+  <p>
+    Sokofy is currently provided free of charge and does not process payments or subscriptions.
+  </p>
+
+  <h3>2.9 Network and Technical Data</h3>
+  <p>
+    When cloud features are used (such as authentication, OTP verification, support submissions, or account deletion),
+    network-related data (such as IP address) may be processed by our service providers as part of normal network operations.
   </p>
 
   <h2>3. How We Use Information</h2>
 
   <h3>3.1 Service Operation</h3>
   <ul>
-    <li>To store and process business data directly on the user’s device</li>
+    <li>To store and process business data on your device</li>
     <li>To calculate sales totals, summaries, and operational insights</li>
     <li>To deliver POS and business management functionality</li>
   </ul>
@@ -117,12 +154,8 @@
     Authentication is handled through Firebase Authentication, which applies
     industry-standard security practices.
   </p>
-
-  <h3>3.3 Analytics and Performance Improvement</h3>
   <p>
-    To understand app usage trends and growth.
-    To improve stability, features, and user experience.
-    Analytics are collected using Firebase Analytics in aggregated form.
+    We also use OTP verification and related security controls to help protect accounts and prevent abuse.
   </p>
 
   <h3>3.4 Support and Communication</h3>
@@ -157,11 +190,13 @@
 
   <h3>4.2 Third-Party Services</h3>
   <p>
-    We use trusted third-party services strictly for app functionality:
+    We use trusted third-party services strictly for app functionality, including:
   </p>
   <ul>
     <li>Firebase Authentication – secure user login and identity management</li>
-    <li>Firebase Analytics – app usage analytics</li>
+    <li>Cloud Firestore – limited account profile fields and security timestamps</li>
+    <li>Cloud Functions – email OTP, support submissions, and account deletion</li>
+    <li>SMTP email delivery – sending verification codes and support emails</li>
   </ul>
   <p>
     These services process data in accordance with their own privacy and
@@ -179,56 +214,76 @@
   <h3>5.1 Local Data Storage</h3>
   <p>
     Business operation data is primarily stored locally on the user’s device
-    using a secure local database. Deleting the app or account permanently
-    removes locally stored data.
+    using a local database in the app’s device storage. Deleting the app, clearing app storage,
+    or deleting your account may permanently remove locally stored data.
   </p>
 
   <h3>5.2 Cloud Services and Future Backup</h3>
   <p>
-    User authentication data is securely managed by Firebase Authentication.
-    In future versions, optional cloud backup or synchronization features may
-    be introduced to help users protect their data.
+    User authentication and limited account profile fields are managed using Firebase services.
+    Sokofy does not currently provide a general-purpose cloud backup or synchronization service for your local business data.
   </p>
   <p>
-    Any such feature will be clearly explained, optional, and covered by an
-    updated Privacy Policy.
+    If optional cloud backup or synchronization features are introduced in the future, they will be clearly explained,
+    optional (where applicable), and covered by an updated Privacy Policy.
   </p>
 
   <h3>5.3 Security Measures</h3>
   <p>
-    Passwords are encrypted and managed securely by Firebase.
-    Access controls and technical safeguards are applied.
-    We take reasonable measures to protect data, though no system can guarantee
-    absolute security.
+    We use reasonable administrative, technical, and organizational safeguards appropriate to the nature of the data.
+    Authentication security is handled by Firebase Authentication. Sokofy may also provide optional app lock features on-device.
+    However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.
   </p>
 
-  <h2>6. User Rights (GDPR-Aligned Principles)</h2>
-  <p>Users have the right to:</p>
+  <h2>6. Data Retention and Deletion</h2>
+  <p>
+    <strong>Local data:</strong> Your business data stored on your device is kept until you delete it, delete your account,
+    clear app storage, or uninstall the app.
+  </p>
+  <p>
+    <strong>Account profile data:</strong> Limited account profile fields stored in Cloud Firestore are retained while your account is active
+    and may be deleted when you delete your account.
+  </p>
+  <p>
+    <strong>OTP data:</strong> OTP records are designed to expire after a short time (typically minutes) and may be deleted after completion of the verification flow.
+  </p>
+  <p>
+    <strong>Deleted-email cooldown:</strong> If you delete your account, we may retain a hashed record of your email address for a limited time (currently up to 7 days)
+    to prevent abuse and to enforce a cooldown period before re-registration with the same email.
+  </p>
+
+  <h2>7. Your Choices and Rights</h2>
+  <p>Depending on your circumstances and applicable law, you may be able to:</p>
   <ul>
-    <li>Access their data within the application</li>
-    <li>Update or correct their information</li>
-    <li>Delete their account and associated data</li>
-    <li>Withdraw consent where applicable</li>
+    <li>Access and update certain information in the app (such as business profile details)</li>
+    <li>Delete local data by deleting entries in the app, clearing app storage, or uninstalling the app</li>
+    <li>Delete your account using the in-app account deletion flow (where available)</li>
   </ul>
   <p>
     Once data is deleted from the device, it cannot be recovered.
   </p>
 
-  <h2>7. Application Access and Updates</h2>
+  <h2>8. International Data Processing</h2>
+  <p>
+    Some cloud services we use may process and store data on servers located outside Tanzania.
+    Where this applies, we rely on our service providers’ security and compliance measures.
+  </p>
+
+  <h2>9. Application Access and Updates</h2>
   <p>
     Sokofy is distributed exclusively through Google Play Store and Apple App
     Store. Updates may be released regularly to improve features, performance,
     and security.
   </p>
 
-  <h2>8. Children’s Privacy</h2>
+  <h2>10. Children’s Privacy</h2>
   <p>
     Sokofy is not intended for users under the age of 16.
     We do not knowingly collect personal information from children. If such
     data is identified, it will be deleted promptly.
   </p>
 
-  <h2>9. Changes to This Privacy Policy</h2>
+  <h2>11. Changes to This Privacy Policy</h2>
   <p>
     We may update this Privacy Policy from time to time to reflect new
     features or services, legal or regulatory requirements, and operational
@@ -239,7 +294,7 @@
     or updated policy pages.
   </p>
 
-  <h2>10. Contact Information</h2>
+  <h2>12. Contact Information</h2>
   <p>
     <strong>Developer:</strong> Busara Digital<br>
     <strong>Phone:</strong> +255 696 189 401<br>
