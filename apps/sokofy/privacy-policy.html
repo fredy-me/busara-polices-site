@@ -79,6 +79,12 @@
     This local data remains on your device unless you choose to export or share
     it (for example, by generating and sharing a PDF report).
   </p>
+  <p>
+    Sokofy may also provide an in-app reset feature in Settings that allows you
+    to delete local business data stored on that device and start your business
+    records again from scratch. This reset is a local device action and does
+    not itself delete your Sokofy account.
+  </p>
 
   <h3>2.3 Authentication and Account Profile Data (Cloud)</h3>
   <p>
@@ -214,8 +220,22 @@
   <h3>5.1 Local Data Storage</h3>
   <p>
     Business operation data is primarily stored locally on the user’s device
-    using a local database in the app’s device storage. Deleting the app, clearing app storage,
-    or deleting your account may permanently remove locally stored data.
+    using a local database in the app’s device storage. Deleting the app,
+    clearing app storage, using the in-app local data reset feature, or
+    deleting your account may permanently remove locally stored data.
+  </p>
+  <p>
+    The in-app local reset feature is designed to remove local business records
+    for the active business on that device, including products, sales records,
+    orders, expenses, inventory debts, inventory notes, local notifications,
+    and certain tenant-level local settings used by the app. It is intended for
+    situations where a user wants to clear business records and begin again.
+  </p>
+  <p>
+    This local reset does not, by itself, delete the user’s remote account.
+    Certain user or device preferences may remain, such as sign-in state,
+    language, theme, or app-lock configuration, unless removed through separate
+    account deletion, app storage clearing, or device-level actions.
   </p>
 
   <h3>5.2 Cloud Services and Future Backup</h3>
@@ -238,7 +258,7 @@
   <h2>6. Data Retention and Deletion</h2>
   <p>
     <strong>Local data:</strong> Your business data stored on your device is kept until you delete it, delete your account,
-    clear app storage, or uninstall the app.
+    use the in-app local reset feature, clear app storage, or uninstall the app.
   </p>
   <p>
     <strong>Account profile data:</strong> Limited account profile fields stored in Cloud Firestore are retained while your account is active
@@ -260,11 +280,11 @@
   <p>Depending on your circumstances and applicable law, you may be able to:</p>
   <ul>
     <li>Access and update certain information in the app (such as business profile details)</li>
-    <li>Delete local data by deleting entries in the app, clearing app storage, or uninstalling the app</li>
+    <li>Delete local data by deleting entries in the app, using the in-app local reset feature, clearing app storage, or uninstalling the app</li>
     <li>Delete your account using the in-app account deletion flow (where available)</li>
   </ul>
   <p>
-    Once data is deleted from the device, it cannot be recovered.
+    The in-app local reset feature requires explicit user confirmation before it proceeds. Once data is deleted from the device, it cannot be recovered.
   </p>
 
   <h2>8. International Data Processing</h2>
